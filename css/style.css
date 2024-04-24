@@ -136,7 +136,7 @@ main {
     height: 90vh;
     color: white;
     background: linear-gradient(to right top, #0000008a, #0000008a),
-      url(/assets/img/banner-bg.jpg);
+      url(../assets/img/banner-bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
