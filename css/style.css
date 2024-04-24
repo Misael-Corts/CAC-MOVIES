@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bgprimary: #9f3647;
+}
+
+@keyframes logo {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(5px, 5px) rotate(5deg);
+  }
+  50% {
+    transform: translate(0, 0) rotate(0eg);
+  }
+  75% {
+    transform: translate(-5px, 5px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+h1,
+h2 {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+a {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+  background-color: #181419;
+  color: white;
+}
+
+/* estilos scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(23, 23, 23);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bgprimary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bgprimary);
+}
+
+/* estilos header */
+
+header {
+  background-color: var(--bgprimary);
+  color: white;
+  position: sticky;
+  height: 10vh;
+  top: 0;
+  z-index: 10;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 40px;
+    padding: 20px 0px;
+
+    .logo {
+      text-decoration: none;
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+      &:hover {
+        animation-name: logo;
+        animation-duration: 0.25s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+    }
+
+    .listNavbar {
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
+
+    .listItems {
+      margin-right: 20px;
+    }
+
+    .linkNav {
+      color: rgb(255, 255, 255);
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      transition: transform 0.3s ease 0s, box-shadow 0.3s ease 0s;
+      &:hover {
+        transform: scale(0.95);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+      }
+    }
+
+    .linkNav-login {
+      background-color: rgb(24, 20, 25);
+      color: white;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      transition: transform 0.3s ease 0s, box-shadow 0.3s ease 0s;
+      &:hover {
+        background-color: #9f3647;
+      }
+    }
+  }
+}
+
+/* estilos main */
+
+main {
+  .section1 {
+    height: 90vh;
+    color: white;
+    background: linear-gradient(to right top, #0000008a, #0000008a),
+      url(/assets/img/banner-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .title {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .subTitle {
+      font-size: 2.2rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    .btnRegister {
+      text-decoration: none;
+      background-color: var(--bgprimary);
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      color: white;
+      font-weight: 700;
+      transition: transform 0.3s, box-shadow 0.3s;
+      &:hover {
+        transform: scale(0.95);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+
+  .section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 50vh;
+
+    .title {
+      margin-bottom: 3rem;
+    }
+
+    .searchBar {
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      outline: none;
+      width: 500px;
+      height: 50px;
+      font-size: 1.2rem;
+    }
+
+    .btnBuscar {
+      color: white;
+      background-color: var(--bgprimary);
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      border: 2px solid white;
+      width: 100px;
+      height: 50px;
+      margin-left: 10px;
+      font-size: 1.2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+      &:hover {
+        transform: scale(0.95);
+        box-shadow: 0 0 10px rgba(230, 228, 228, 0.3);
+      }
+    }
+  }
+
+  hr {
+    width: 80%;
+    border: 1px solid var(--bgprimary);
+    margin-top: 10rem;
+    margin: 0 auto;
+  }
+
+  .section3 {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    .title {
+      margin: 30px 0;
+    }
+
+    .moviesTrend {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 60px;
+      margin: 20px 0;
+    }
+
+    a:hover {
+      filter: blur(20px);
+    }
+
+    .movie {
+      width: 200px;
+      height: 300px;
+      border-radius: 10px;
+      transition: all 0.5s ease;
+      &:hover {
+        box-shadow: 0 0 30px #9f3648cd;
+        transform: scale(0.9);
+      }
+    }
+
+    .imgMovie {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .btnMovies {
+      color: white;
+      background-color: var(--bgprimary);
+      border-radius: 5px;
+      border: 1px solid white;
+      width: 100px;
+      height: 50px;
+      margin-left: 20px;
+      margin-top: 30px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      &:hover {
+        transform: scale(0.95);
+        box-shadow: 0 0 10px rgba(230, 228, 228, 0.3);
+      }
+    }
+  }
+
+  .section4 {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 60px;
+
+    .movies {
+      display: flex;
+      align-items: center;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      width: 100%;
+      margin-top: 20px;
+      padding-bottom: 30px;
+    }
+
+    .movie {
+      margin-left: 30px;
+      width: 150px;
+      min-width: 150px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+/* estilos footer */
+
+footer {
+  background-color: var(--bgprimary);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+
+  .listNavbar {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+  .listItems {
+    margin-right: 20px;
+  }
+
+  .linkNav {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+
+  .linkNav-adminPelis {
+    background-color: rgb(24, 20, 25);
+    color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+
+  .flecha-hacia-arriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+/* estilos mobile */
+
+@media (max-width: 768px) {
+  /* estilos header mobile */
+
+  header {
+    height: 100%;
+    nav {
+      flex-direction: column;
+      margin: 0 10px;
+      row-gap: 20px;
+
+      .listNavbar {
+        padding: initial;
+      }
+
+      .linkNav {
+        font-weight: 400;
+        font-size: 1rem;
+        padding: 0.2rem;
+      }
+
+      .linkNav-login {
+        font-weight: 400;
+        font-size: 1rem;
+        padding: 0.2rem;
+      }
+    }
+  }
+
+  /* estilos main mobile */
+
+  main {
+    .section1 {
+      height: 60vh;
+
+      .title {
+        font-size: 2.5rem;
+      }
+
+      .subTitle {
+        font-size: 1.5rem;
+      }
+
+      .btnRegister {
+        padding: 0.8rem 1.5rem;
+      }
+    }
+
+    .section2 {
+      .searchBar {
+        width: 300px;
+      }
+    }
+  }
+
+  /* estilos footer mobile */
+  footer {
+    height: initial;
+    padding: 15px 0px;
+    .listNavbar {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+  }
+}

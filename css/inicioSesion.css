@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+a {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to right top, #24242473, #24242473),
+    url(../assets/img/bg-register.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  height: 10vh;
+  padding: 20px;
+
+  .logo {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+}
+
+main {
+  .sectionContainer {
+    margin: 0 auto;
+    width: 30%;
+    background-color: rgb(42, 42, 42);
+    padding: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .formContainer {
+    padding: 40px;
+  }
+
+  .inputForm {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 40px;
+    padding: 0px 20px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    border: 2px solid #9f3647;
+    background-color: #333333;
+    outline: none;
+    color: rgb(255, 255, 255);
+  }
+
+  .btnLogin {
+    width: 100%;
+    background-color: #9f3647;
+    border: 2px solid #9f3647;
+    color: white;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .linkRegister {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #787878;
+    font-weight: 400;
+  }
+}
+
+/* estilos mobile */
+
+@media (max-width: 1200px) {
+  main {
+    .sectionContainer {
+      width: 90%;
+      text-align: center;
+    }
+
+    .formContainer {
+      width: 100%;
+    }
+  }
+}
