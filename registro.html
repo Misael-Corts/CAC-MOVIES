@@ -40,58 +40,65 @@
   <main>
     <section class="sectionContainer">
   <!--FORMULARIO---->
-  <div class="container text-center pt-5">
-    <section class="sectionContainer">
-      <form>
-      
-        <div class="mb-3 row">
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
-        <div class="mb-3">
-          <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña</label>
-          <div>
-            <input type="password" class="form-control" id="exampleFormControlInput1">
-          </div>
-        </div>
-        <div class="mb-3">
-          <label for="inputPassword" class="col-form-label">Confirmar Contraseña</label>
-          <div>
-            <input type="password" class="form-control" id="exampleFormControlInput1">
-          </div>
-        </div>
-  
-        <div class="mb-3">
-          <label for="formFile" class="form-label">Avatar</label>
-          <input class="form-control" type="file" id="formFile">
-        </div>
-  
-        <div>
-          <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Registrarse</button>
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-            <div class="modal-dialog">
-              <div class="modal-content sectionContainer">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Registro Exitoso</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <p>Gracias por registrarte</p>
-                </div>
-                <div class="modal-footer">
-                  <a href="./index.html"><button type="button" class="btn btn-primary">Volver al menu principal</button></a>
-                </div>
+  <div class="container pt-3">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="card bg-dark">
+          <div class="card-body mb-3 ">
+            <h5 class="card-title text-center">Formulario de Registro</h5>
+            <form>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
               </div>
-            </div>
+              <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" placeholder="Apellido" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+              </div>
+              <div class="mb-3">
+                <label for="contrasena" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" required>
+              </div>
+              <div class="mb-3">
+                <label for="confirmarContrasena" class="form-label">Confirmar Contraseña</label>
+                <input type="password" class="form-control" id="confirmarContrasena" placeholder="Repita Contraseña" required>
+              </div>
+              <div class="mb-3">
+                <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" required>
+              </div>
+              <div class="mb-3">
+                <label for="pais" class="form-label">País</label>
+                <select name="pais" id="pais" class="form-select" required oninvalid="this.setCustomValidity('Por favor selecciona un país')">
+                  <option value="">País</option>
+                  <option value="AR">Argentina</option>
+                  <option value="BO">Bolivia</option>
+                  <option value="BR">Brasil</option>
+                  <option value="CH">Chile</option>
+                  <option value="CO">Colombia</option>
+                  <option value="EC">Ecuador</option>
+                  <option value="PY">Paraguay</option>
+                  <option value="PE">Perú</option>
+                  <option value="UY">Uruguay</option>
+                  <option value="VE">Venezuela</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="avatar" class="form-label">Avatar</label>
+                <input type="file" class="form-control" id="avatar">
+              </div>
+              <div class="d-grid">
+                <button class="btn btn-primary" type="submit">Registrarse</button>
+              </div>
+            </form>
           </div>
         </div>
-
       </div>
-      </form>
-    </section>
-
+    </div>
   </div>
   
 </section>
