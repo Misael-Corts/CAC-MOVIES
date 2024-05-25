@@ -1,6 +1,3 @@
-
-// API de TMDB
-
 document.addEventListener("DOMContentLoaded", () => {
     const accessToken = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YzQyZGRiY2JkYTBhNmFiMmEwMTI2YmIwN2U3Zjk3OSIsInN1YiI6IjY2NTI0NmFhMjkzYTVhODE3MTMzNjUzMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.aZBlN8GWB0o0KdeWaKyD98pmocR-3MqmMwtwYW7kQ_c';
     const apiUrl = `https://api.themoviedb.org/3/movie/now_playing?language=es-ES&page=1`;
@@ -31,8 +28,15 @@ function fetchMovies(apiUrl, accessToken, container) {
             const movieTitle = document.createElement('h3');
             movieTitle.textContent = movie.title;
 
+          
+            const detailsLink = document.createElement('a');
+            detailsLink.href = `api_detalles.html?id=${movie.id}`; 
+            detailsLink.textContent = 'Ver detalles';
+            detailsLink.classList.add('ver-detalles');
+
             movieElement.appendChild(movieImage);
             movieElement.appendChild(movieTitle);
+            movieElement.appendChild(detailsLink);
             container.appendChild(movieElement);
         });
     })
@@ -41,3 +45,4 @@ function fetchMovies(apiUrl, accessToken, container) {
         container.innerHTML = '<p>Ocurrió un error al cargar las películas. Por favor, intenta nuevamente más tarde.</p>';
     });
 }
+

@@ -1,0 +1,15 @@
+.titulo-pelicula {
+    font-size: 24px;
+    color: #e9e6e6;
+}
+
+.descripcion-pelicula {
+    font-size: 16px;
+    color: #e9e6e6;
+}
+
+.imagen-pelicula {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
