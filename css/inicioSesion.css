@@ -70,6 +70,12 @@ main {
     background-color: #333333;
     outline: none;
     color: rgb(255, 255, 255);
+    display: block;
+    margin-bottom: 10px;
+  }
+  .error {
+    color: red;
+    display: none;
   }
 
   .btnLogin {
@@ -105,3 +111,5 @@ main {
     }
   }
 }
+
+
